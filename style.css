@@ -102,6 +102,19 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+.grid-item {
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  min-height: 150px;
+  width: 90%;
+}
+.grid-item:hover {
+  transform: translateY(-5px);
+}
 .card:hover {
   transform: translateY(-5px);
 }
