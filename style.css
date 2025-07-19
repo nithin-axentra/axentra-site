@@ -106,12 +106,15 @@ h2 {
 .grid-item {
   background-color: #f8f8f8;
   border-radius: 12px;
-  padding: 30px;
+  padding: 20px; /* Reduced from 30px */
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
-  min-height: 150px;
-  width: 90%;
+  width: 100%;
+  height: 100%;  /* Ensures consistent box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .grid-item:hover {
   transform: translateY(-5px);
