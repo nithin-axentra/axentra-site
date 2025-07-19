@@ -6,7 +6,7 @@ body {
 }
 
 .topbar {
-  background-color: #e6dbfa;
+  background-color: #f0eaff;
   padding: 1rem 2rem;
 }
 .topbar-container {
@@ -19,12 +19,47 @@ body {
 }
 
 .hero-section {
-  background: linear-gradient(to right, #460073, #A100FF);
-  color: white;
-  padding: 100px 20px;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
-.hero-section .cta-btn {
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(70,0,115,0.7), rgba(161,0,255,0.5));
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content .cta-btn {
   background: #FFFFFF;
   color: #A100FF;
   padding: 12px 24px;
@@ -33,7 +68,7 @@ body {
   border-radius: 30px;
   transition: background 0.3s ease;
 }
-.hero-section .cta-btn:hover {
+.hero-content .cta-btn:hover {
   background: #F0F0F0;
 }
 
@@ -78,38 +113,4 @@ footer {
   background: #1B1B1B;
   color: white;
   text-align: center;
-}
-.hero-section {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.bg-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  max-width: 600px;
-  padding: 1rem;
-}
-
-.hero-section::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 50%;
-  z-index: 1;
 }
