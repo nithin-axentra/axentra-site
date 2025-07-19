@@ -20,7 +20,6 @@ body {
 
 .hero-section {
   position: relative;
-  height: 10vh;
   overflow: hidden;
   display: flex;
   align-items: center;
