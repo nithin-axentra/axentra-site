@@ -1,12 +1,12 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #e9e5f2;
+  background: #fefdfe;
   color: #1B1B1B;
 }
 
 .topbar {
-  background-color: #e8e1f6;
+  background-color: #fefdfe;
   padding: 1rem 2rem;
 }
 .topbar-container {
