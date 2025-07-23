@@ -1,25 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Axentra - Empowering Digital Operations</title>
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header class="topbar">
     <div class="topbar-container">
-      <img src="logo.png" alt="Axentra Logo" class="logo"/>
+      <img src="logo.png" alt="Axentra Logo" class="logo" />
     </div>
   </header>
 
+  <!-- Main Navigation with Dropdowns -->
+  <nav class="main-nav sticky-nav">
+    <div class="container">
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown"><a href="#">Why Axentra? <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Our Approach</a></li>
+            <li><a href="#">Core Values</a></li>
+            <li><a href="#">Technology</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Services <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Customer Support</a></li>
+            <li><a href="#">Tech Support</a></li>
+            <li><a href="#">Banking Operations</a></li>
+            <li><a href="#">Data Entry & Processing</a></li>
+            <li><a href="#">Lead Generation</a></li>
+            <li><a href="#">KYC Operations</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Industries <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">E-commerce</a></li>
+            <li><a href="#">Healthcare</a></li>
+            <li><a href="#">BFSI</a></li>
+            <li><a href="#">Real Estate</a></li>
+            <li><a href="#">Telecom</a></li>
+            <li><a href="#">Insurance</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Insights <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Careers <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Join Us</a></li>
+            <li><a href="#">Open Positions</a></li>
+            <li><a href="#">Culture</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="#">Investors <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Financials</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+    </div>
+  </nav>
+
   <header class="hero-section">
     <video autoplay muted loop playsinline class="bg-video">
-      <source src="your-video.mp4" type="video/mp4"/>
+      <source src="your-video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
     <div class="container hero-content">
@@ -93,6 +150,24 @@
   <footer>
     <p>&copy; 2025 Axentra. All rights reserved.</p>
   </footer>
-</body>
 
+  <!-- JavaScript for mobile navigation and dropdowns -->
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+    // Toggle mobile dropdowns
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth < 992) {
+          e.preventDefault();
+          const dropdown = link.parentNode.querySelector('.dropdown-content');
+          dropdown.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+</body>
 </html>
