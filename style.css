@@ -169,7 +169,7 @@ section:first-of-type {
   padding-top: 0;
 }
 
-/* grid reuse */
+/* grid */
 .grid {
   display: grid;
   gap: 24px;
@@ -244,11 +244,12 @@ footer {
   text-align: center;
 }
 
-/* floating contact */
+/* floating contact (right) */
 .floating-contact {
   position: fixed;
   bottom: 24px;
-  left: 24px;
+  right: 24px;
+  left: auto;
   z-index: 2000;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -272,7 +273,8 @@ footer {
   flex-direction: column;
   position: absolute;
   bottom: 70px;
-  left: 0;
+  right: 0;
+  left: auto;
   background: white;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
