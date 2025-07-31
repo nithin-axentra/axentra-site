@@ -6,6 +6,7 @@ body {
   line-height: 1.5;
 }
 
+/* Topbar */
 .topbar {
   background-color: #fefdfe;
   padding: 1rem 2rem;
@@ -19,7 +20,7 @@ body {
   width: auto;
 }
 
-/* ==== MAIN NAVIGATION ==== */
+/* Main Nav */
 .main-nav {
   background: white;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
@@ -27,7 +28,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  font-family: 'Segoe UI', sans-serif;
 }
 .main-nav .container {
   display: flex;
@@ -39,9 +39,7 @@ body {
 }
 .nav-menu {
   display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style: none;
   gap: 20px;
 }
 .nav-menu li {
@@ -54,9 +52,6 @@ body {
   color: #1B1B1B;
   font-weight: 500;
   padding: 24px 16px;
-  display: flex;
-  align-items: center;
-  transition: color 0.2s ease;
   font-size: 0.96rem;
 }
 .nav-menu a i {
@@ -64,7 +59,8 @@ body {
   font-size: 0.8rem;
   color: #7500C0;
 }
-/* Dropdown styles */
+
+/* Dropdown */
 .dropdown-content {
   position: absolute;
   top: 72px;
@@ -79,158 +75,71 @@ body {
   transition: opacity 0.2s ease, transform 0.2s ease;
   transform: translateY(10px);
   z-index: 100;
-  display: flex;
   flex-direction: column;
-}
-.dropdown-content a {
-  padding: 12px 20px;
-  color: #1B1B1B;
-  font-size: 0.9rem;
-}
-.dropdown-content li:hover a {
-  color: #7500C0;
 }
 .dropdown:hover .dropdown-content {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
-.nav-toggle {
-  background: none;
-  border: none;
-  color: #7500C0;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
+.dropdown-content a {
+  padding: 12px 20px;
+  color: #1B1B1B;
 }
-/* Mobile styles */
-@media (max-width: 992px) {
-  .main-nav .container {
-    padding: 0 16px;
-  }
-  .nav-menu {
-    position: fixed;
-    flex-direction: column;
-    background: white;
-    top: 88px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 88px);
-    padding: 24px 32px;
-    box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 999;
-    overflow-y: auto;
-    gap: 0;
-  }
-  .nav-menu.active {
-    transform: translateX(0);
-  }
-  .nav-menu li {
-    width: 100%;
-    border-top: 1px solid #eaeaea;
-  }
-  .nav-menu a {
-    padding: 16px 0;
-  }
-  .dropdown-content {
-    position: static;
-    opacity: 1;
-    pointer-events: all;
-    box-shadow: none;
-    padding: 0 0 0 16px;
-    display: none;
-    border-radius: 0;
-    margin: 8px 0;
-    border-left: 2px solid #eaeaea;
-  }
-  .dropdown-content.active {
-    display: flex;
-  }
-  .nav-toggle {
-    display: block;
-  }
-  .nav-menu a i {
-    display: none;
-  }
+.dropdown-content li:hover a {
+  color: #7500C0;
 }
 
-/* ==== HERO SECTION ==== */
+/* Hero Section */
 .hero-section {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  /*min-height: 100vh; /* Fill the viewport */
-  padding: 0;        /* No extra space */
-  overflow: hidden;
   color: white;
 }
-
-/* Responsive hero fix */
-@media (max-width: 767px) {
-  .hero-section {
-    min-height: 80vh; /* Allow some flexibility for very short mobile viewports */
-  }
-}
-
 .bg-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;           /* Fill entire section */
+  height: 100%;
   object-fit: cover;
   z-index: -1;
-  pointer-events: none;
 }
-
 .hero-section::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, rgba(70,0,115,0.7), rgba(161,0,255,0.5));
   z-index: 0;
-  pointer-events: none;
 }
 .hero-content {
   position: relative;
   z-index: 1;
   max-width: 800px;
+  margin: 0 auto;
   padding: 2rem;
 }
-.hero-content .cta-btn {
+.cta-btn {
   background: #FFFFFF;
   color: #A100FF;
   padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
   border-radius: 30px;
-  transition: background 0.3s ease;
-  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
   margin-top: 16px;
 }
-.hero-content .cta-btn:hover {
-  background: #F0F0F0;
-}
 
-/* ==== SECTIONS ==== */
+/* Sections */
 section {
   padding: 64px 20px;
   text-align: center;
-  margin-top: 0;
 }
-/* Remove padding-top from FIRST section after hero so it hugs the hero-section */
 section:first-of-type {
   padding-top: 0;
 }
 
-/* Grid for services and industries */
+/* Grid */
 .grid {
   display: grid;
   gap: 24px;
@@ -252,7 +161,6 @@ section:first-of-type {
   border: 1px solid #e0e0e0;
   border-radius: 16px;
   padding: 24px 20px;
-  text-align: center;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
@@ -266,7 +174,6 @@ section:first-of-type {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(117, 0, 192, 0.1);
 }
-/* Icon styling for services */
 .grid-item i {
   color: #7500C0;
   font-size: 1.6rem;
@@ -279,10 +186,8 @@ section:first-of-type {
   text-align: left;
 }
 
-/* Contact and WhatsApp button */
+/* WhatsApp Button */
 .btn-whatsapp {
-  display: inline-block;
-  margin-top: 16px;
   background: #25D366;
   color: white;
   padding: 10px 24px;
