@@ -10,12 +10,6 @@
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
-
-  <!-- Main JS (after DOM) -->
-  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -192,7 +186,7 @@
     <p>&copy; 2025 Axentra. All rights reserved.</p>
   </footer>
 
-  <!-- Floating Contact Widget -->
+  <!-- Floating Contact Widget (bottom-right) -->
   <div class="floating-contact">
     <button class="contact-btn" id="open-contact" aria-label="Contact us">
       <i class="fas fa-comments"></i>
@@ -221,5 +215,8 @@
       <div id="form-status" aria-live="polite"></div>
     </div>
   </div>
+
+  <!-- Main JS (module loads EmailJS v4 internally) -->
+  <script type="module" src="script.js"></script>
 </body>
 </html>
