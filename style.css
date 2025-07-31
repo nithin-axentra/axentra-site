@@ -163,7 +163,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 100vh; /* Fill the viewport */
+  /*min-height: 100vh; /* Fill the viewport */
   padding: 0;        /* No extra space */
   overflow: hidden;
   color: white;
