@@ -4,14 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Axentra - Empowering Digital Operations</title>
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <!-- Topbar -->
   <header class="topbar">
@@ -19,7 +14,6 @@
       <img src="logo.png" alt="Axentra Logo" class="logo" />
     </div>
   </header>
-
   <!-- Navigation -->
   <nav class="main-nav sticky-nav">
     <div class="container">
@@ -79,17 +73,13 @@
           </ul>
         </li>
       </ul>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <i class="fa fa-bars"></i>
-      </button>
+      <button class="nav-toggle" id="nav-toggle"><i class="fa fa-bars"></i></button>
     </div>
   </nav>
-
   <!-- Hero -->
   <header class="hero-section">
     <video autoplay muted loop playsinline class="bg-video">
       <source src="your-video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
     </video>
     <div class="container hero-content">
       <h1>Empowering Businesses Through Scalable BPO Solutions</h1>
@@ -97,81 +87,41 @@
       <a href="#contact" class="cta-btn">Let’s Talk</a>
     </div>
   </header>
-
   <!-- About -->
   <section class="about">
     <div class="container">
       <h2>Who We Are</h2>
-      <p>Axentra is a digital-first BPO company built for the modern business era. We empower startups, SMEs, and enterprises to offload operational complexity and focus on growth. With a tech-enabled workforce, 24/7 agility, and process-driven excellence, we deliver scalable, cost-efficient, and high-impact solutions across customer support, data operations, and lead generation.</p>
+      <p>Axentra is a digital-first BPO company built for the modern business era. We empower startups, SMEs, and enterprises to offload operational complexity and focus on growth.</p>
     </div>
   </section>
-
   <!-- Services -->
   <section class="services">
     <div class="container">
       <h2>Our Services</h2>
       <div class="grid">
-        <div class="grid-item">
-          <i class="fas fa-headset" aria-hidden="true"></i>
-          <span>Customer Support</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-tools" aria-hidden="true"></i>
-          <span>Tech Support</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-university" aria-hidden="true"></i>
-          <span>Banking Operations</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-keyboard" aria-hidden="true"></i>
-          <span>Data Entry & Processing</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-magnet" aria-hidden="true"></i>
-          <span>Lead Generation</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-id-card" aria-hidden="true"></i>
-          <span>KYC Operations</span>
-        </div>
+        <div class="grid-item"><i class="fas fa-headset"></i><span>Customer Support</span></div>
+        <div class="grid-item"><i class="fas fa-tools"></i><span>Tech Support</span></div>
+        <div class="grid-item"><i class="fas fa-university"></i><span>Banking Operations</span></div>
+        <div class="grid-item"><i class="fas fa-keyboard"></i><span>Data Entry & Processing</span></div>
+        <div class="grid-item"><i class="fas fa-magnet"></i><span>Lead Generation</span></div>
+        <div class="grid-item"><i class="fas fa-id-card"></i><span>KYC Operations</span></div>
       </div>
     </div>
   </section>
-
   <!-- Industries -->
   <section class="industries">
     <div class="container">
       <h2>Industries We Serve</h2>
       <div class="grid">
-        <div class="grid-item">
-          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-          <span>E-commerce</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-heartbeat" aria-hidden="true"></i>
-          <span>Healthcare</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-university" aria-hidden="true"></i>
-          <span>BFSI</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-building" aria-hidden="true"></i>
-          <span>Real Estate</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-wifi" aria-hidden="true"></i>
-          <span>Telecom</span>
-        </div>
-        <div class="grid-item">
-          <i class="fas fa-shield-alt" aria-hidden="true"></i>
-          <span>Insurance</span>
-        </div>
+        <div class="grid-item"><i class="fas fa-shopping-cart"></i><span>E-commerce</span></div>
+        <div class="grid-item"><i class="fas fa-heartbeat"></i><span>Healthcare</span></div>
+        <div class="grid-item"><i class="fas fa-university"></i><span>BFSI</span></div>
+        <div class="grid-item"><i class="fas fa-building"></i><span>Real Estate</span></div>
+        <div class="grid-item"><i class="fas fa-wifi"></i><span>Telecom</span></div>
+        <div class="grid-item"><i class="fas fa-shield-alt"></i><span>Insurance</span></div>
       </div>
     </div>
   </section>
-
   <!-- Contact -->
   <section class="contact" id="contact">
     <div class="container">
@@ -180,43 +130,32 @@
       <a href="https://wa.me/919113513387" class="btn-whatsapp" target="_blank">Chat on WhatsApp</a>
     </div>
   </section>
-
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Axentra. All rights reserved.</p>
   </footer>
-
-  <!-- Floating Contact Widget (bottom-right) -->
+  <!-- Floating Contact Widget -->
   <div class="floating-contact">
-    <button class="contact-btn" id="open-contact" aria-label="Contact us">
-      <i class="fas fa-comments"></i>
-    </button>
-    <div class="contact-popup" id="contact-popup" aria-label="Contact options">
-      <button class="contact-option" id="open-form">
-        <i class="fas fa-paper-plane"></i> Write an Email
-      </button>
-      <a href="https://wa.me/919113513387" target="_blank" class="contact-option">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
+    <button class="contact-btn" id="open-contact"><i class="fas fa-comments"></i></button>
+    <div class="contact-popup" id="contact-popup">
+      <button class="contact-option" id="open-form"><i class="fas fa-paper-plane"></i> Write an Email</button>
+      <a href="https://wa.me/919113513387" target="_blank" class="contact-option"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
   </div>
-
   <!-- Email Form Modal -->
-  <div class="email-form-modal" id="email-modal" aria-hidden="true">
-    <div class="email-form-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <span class="close-modal" id="close-modal" aria-label="Close">&times;</span>
-      <h3 id="modal-title">Send us a message</h3>
+  <div class="email-form-modal" id="email-modal">
+    <div class="email-form-content">
+      <span class="close-modal" id="close-modal">&times;</span>
+      <h3>Send us a message</h3>
       <form id="contactForm">
-        <input type="text" name="from_name" placeholder="Your Name" required aria-label="Your name" />
-        <input type="tel" name="from_phone" placeholder="Phone Number" required aria-label="Phone number" />
-        <textarea name="message" placeholder="Your Query" required aria-label="Your query"></textarea>
+        <input type="text" name="from_name" placeholder="Your Name" required />
+        <input type="tel" name="from_phone" placeholder="Phone Number" required />
+        <textarea name="message" placeholder="Your Query" required></textarea>
         <button type="submit">Send</button>
       </form>
-      <div id="form-status" aria-live="polite"></div>
+      <div id="form-status"></div>
     </div>
   </div>
-
-  <!-- Main JS (module loads EmailJS v4 internally) -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
