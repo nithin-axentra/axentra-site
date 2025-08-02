@@ -4,9 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Axentra - Empowering Digital Operations</title>
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- Topbar -->
   <header class="topbar">
@@ -14,72 +19,22 @@
       <img src="logo.png" alt="Axentra Logo" class="logo" />
     </div>
   </header>
+
   <!-- Navigation -->
-  <nav class="main-nav sticky-nav">
+  <nav class="main-nav">
     <div class="container">
-      <ul class="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Why Axentra? <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-content">
-            <li><a href="#">Our Approach</a></li>
-            <li><a href="#">Core Values</a></li>
-            <li><a href="#">Technology</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Services <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-content">
-            <li><a href="#">Customer Support</a></li>
-            <li><a href="#">Tech Support</a></li>
-            <li><a href="#">Banking Operations</a></li>
-            <li><a href="#">Data Entry & Processing</a></li>
-            <li><a href="#">Lead Generation</a></li>
-            <li><a href="#">KYC Operations</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Industries <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-content">
-            <li><a href="#">E-commerce</a></li>
-            <li><a href="#">Healthcare</a></li>
-            <li><a href="#">BFSI</a></li>
-            <li><a href="#">Real Estate</a></li>
-            <li><a href="#">Telecom</a></li>
-            <li><a href="#">Insurance</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Insights <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-content">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">News</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Careers <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-content">
-            <li><a href="#">Join Us</a></li>
-            <li><a href="#">Open Positions</a></li>
-            <li><a href="#">Culture</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Investors <i class="fa fa-caret-down"></i></a>
-          <ul class="dropdown-content">
-            <li><a href="#">Investor Relations</a></li>
-            <li><a href="#">Financials</a></li>
-          </ul>
-        </li>
-      </ul>
-      <button class="nav-toggle" id="nav-toggle"><i class="fa fa-bars"></i></button>
+      <ul class="nav-menu" id="nav-menu"></ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <i class="fa fa-bars"></i>
+      </button>
     </div>
   </nav>
+
   <!-- Hero -->
   <header class="hero-section">
-    <video autoplay muted loop playsinline class="bg-video">
+    <video autoplay muted loop playsinline class="bg-video" poster="">
       <source src="your-video.mp4" type="video/mp4" />
+      <!-- fallback content -->
     </video>
     <div class="container hero-content">
       <h1>Empowering Businesses Through Scalable BPO Solutions</h1>
@@ -87,13 +42,15 @@
       <a href="#contact" class="cta-btn">Let’s Talk</a>
     </div>
   </header>
+
   <!-- About -->
   <section class="about">
     <div class="container">
       <h2>Who We Are</h2>
-      <p>Axentra is a digital-first BPO company built for the modern business era. We empower startups, SMEs, and enterprises to offload operational complexity and focus on growth.</p>
+      <p>Axentra is a digital-first BPO company built for the modern business era. We empower startups, SMEs, and enterprises to offload operational complexity and focus on growth. With a tech-enabled workforce, 24/7 agility, and process-driven excellence, we deliver scalable, cost-efficient, and high-impact solutions.</p>
     </div>
   </section>
+
   <!-- Services -->
   <section class="services">
     <div class="container">
@@ -108,6 +65,7 @@
       </div>
     </div>
   </section>
+
   <!-- Industries -->
   <section class="industries">
     <div class="container">
@@ -122,6 +80,7 @@
       </div>
     </div>
   </section>
+
   <!-- Contact -->
   <section class="contact" id="contact">
     <div class="container">
@@ -130,32 +89,39 @@
       <a href="https://wa.me/919113513387" class="btn-whatsapp" target="_blank">Chat on WhatsApp</a>
     </div>
   </section>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Axentra. All rights reserved.</p>
   </footer>
+
   <!-- Floating Contact Widget -->
   <div class="floating-contact">
-    <button class="contact-btn" id="open-contact"><i class="fas fa-comments"></i></button>
+    <button class="contact-btn" id="open-contact" aria-label="Contact us">
+      <i class="fas fa-comments"></i>
+    </button>
     <div class="contact-popup" id="contact-popup">
       <button class="contact-option" id="open-form"><i class="fas fa-paper-plane"></i> Write an Email</button>
-      <a href="https://wa.me/919113513387" target="_blank" class="contact-option"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a class="contact-option" href="https://wa.me/919113513387" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
   </div>
+
   <!-- Email Form Modal -->
-  <div class="email-form-modal" id="email-modal">
-    <div class="email-form-content">
-      <span class="close-modal" id="close-modal">&times;</span>
-      <h3>Send us a message</h3>
+  <div class="email-form-modal" id="email-modal" aria-hidden="true">
+    <div class="email-form-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <span class="close-modal" id="close-modal" aria-label="Close">&times;</span>
+      <h3 id="modal-title">Send us a message</h3>
       <form id="contactForm">
         <input type="text" name="from_name" placeholder="Your Name" required />
         <input type="tel" name="from_phone" placeholder="Phone Number" required />
         <textarea name="message" placeholder="Your Query" required></textarea>
         <button type="submit">Send</button>
       </form>
-      <div id="form-status"></div>
+      <div id="form-status" aria-live="polite"></div>
     </div>
   </div>
+
+  <!-- Script -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
